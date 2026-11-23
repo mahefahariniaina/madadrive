@@ -1,0 +1,43 @@
+<!--META {"path": "/contact/", "title": "Contact et réservation | MadaDrive, location avec chauffeur", "description": "Réservez votre location de voiture avec chauffeur à Madagascar : WhatsApp, téléphone ou formulaire. Réponse rapide, devis clair.", "nav": "contact", "crumb": "Contact"} -->
+<section class="hero navy page-hero"><div class="container">
+<div class="breadcrumb"><a href="/">Accueil</a> › Contact</div>
+<p class="kicker">Contact</p>
+<h1>Parlons de votre trajet</h1>
+<p class="lead">Le plus rapide, c'est WhatsApp. Vous pouvez aussi remplir le formulaire : il prépare le message pour vous.</p>
+</div>{{ROAD}}</section>
+
+<section class="section"><div class="container split" style="align-items:start">
+<div>
+<div class="grid" style="gap:16px">
+<a class="info" href="https://wa.me/{{WA}}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit"><div class="ico">{{ICON:chat}}</div><div><small>WhatsApp (le plus rapide)</small><b>{{PHONE}}</b></div></a>
+<a class="info" href="tel:{{PHONE_TEL}}" style="text-decoration:none;color:inherit"><div class="ico">{{ICON:phone}}</div><div><small>Téléphone</small><b>{{PHONE}}</b></div></a>
+<a class="info" href="mailto:{{EMAIL}}" style="text-decoration:none;color:inherit"><div class="ico">{{ICON:calendar}}</div><div><small>E-mail</small><b>{{EMAIL}}</b></div></a>
+<div class="info"><div class="ico">{{ICON:clock}}</div><div><small>Disponibilité</small><b>{{HOURS}}</b></div></div>
+<div class="info"><div class="ico">{{ICON:pin}}</div><div><small>Basés à</small><b>Antananarivo, Madagascar</b></div></div>
+</div>
+</div>
+<div class="quote">
+<h2>Demande de devis</h2>
+<p class="small">Le formulaire ouvre WhatsApp avec votre demande déjà écrite.</p>
+<form class="js-quote" data-wa="{{WA}}">
+<div class="field"><label for="c-nom">Votre nom</label><input id="c-nom" name="nom" autocomplete="name"></div>
+<div class="field-row">
+<div class="field"><label for="c-tel">Téléphone / WhatsApp *</label><input id="c-tel" type="tel" name="tel" required autocomplete="tel" placeholder="+261 34 …"></div>
+<div class="field"><label for="c-mail">E-mail</label><input id="c-mail" type="email" name="email" autocomplete="email" placeholder="vous@exemple.com"></div>
+</div>
+<div class="field"><label for="c-service">Prestation</label>
+<select id="c-service" name="service"><option>Location avec chauffeur en ville (Tana)</option><option>Voyage en province</option><option>Transfert aéroport Ivato</option><option>Mariage / événement</option><option>Autre demande</option></select></div>
+<div class="field-row">
+<div class="field"><label for="c-depart">Départ</label><input id="c-depart" name="depart" placeholder="Antananarivo"></div>
+<div class="field"><label for="c-dest">Destination</label><input id="c-dest" name="destination"></div>
+</div>
+<div class="field-row">
+<div class="field"><label for="c-date">Date</label><input id="c-date" type="date" name="date"></div>
+<div class="field"><label for="c-jours">Nombre de jours</label><input id="c-jours" type="number" min="1" name="jours" value="1"></div>
+</div>
+<div class="field"><label for="c-pax">Passagers</label><select id="c-pax" name="passagers"><option>1 à 4</option><option>5 à 8</option><option>9 à 12 (maximum)</option></select></div>
+<div class="field"><label for="c-msg">Précisions</label><textarea id="c-msg" name="message" rows="3" placeholder="Numéro de vol, étapes souhaitées…"></textarea></div>
+<button class="btn btn-wa" type="submit">{{ICON:chat}} Envoyer sur WhatsApp</button>
+</form>
+</div>
+</div></section>
