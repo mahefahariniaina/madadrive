@@ -72,26 +72,26 @@ def quote_form(title="Votre devis en 2 minutes", sub="Réponse rapide sur WhatsA
 <div class="field"><label for="q-service">Prestation</label>
 <select id="q-service" name="service">
 <option>Journée avec chauffeur en ville (Tana)</option>
-<option>Demi-journée en ville (Tana)</option>
 <option>Voyage en province</option>
 <option>Transfert aéroport Ivato</option>
 <option>Location au mois (entreprise)</option>
-<option>Mariage / événement</option>
+<option>Mariage</option>
+<option>Événement</option>
 <option>Autre demande</option>
 </select></div>
 <div class="field-row">
-<div class="field"><label for="q-depart">Départ</label><input id="q-depart" name="depart" placeholder="Antananarivo"></div>
-<div class="field"><label for="q-dest">Destination</label><input id="q-dest" name="destination" placeholder="Antsirabe…"></div>
+<div class="field"><label for="q-depart">Départ *</label><input id="q-depart" name="depart" required placeholder="Antananarivo"></div>
+<div class="field"><label for="q-dest">Destination *</label><input id="q-dest" name="destination" required placeholder="Antsirabe…"></div>
 </div>
 <div class="field-row">
-<div class="field"><label for="q-date">Date</label><input id="q-date" type="date" name="date"></div>
-<div class="field"><label for="q-pax">Passagers</label><select id="q-pax" name="passagers"><option>1 à 4</option><option>5 à 8</option><option>9 à 12 (maximum)</option></select></div>
+<div class="field"><label for="q-date">Dates ou période *</label><input id="q-date" name="periode" required placeholder="Ex. du 12 au 15 décembre"></div>
+<div class="field"><label for="q-pax">Passagers *</label><select id="q-pax" name="passagers"><option>1 à 4</option><option>5 à 8</option><option>9 à 12 (maximum)</option></select></div>
 </div>
 <div class="field-row">
-<div class="field"><label for="q-nom">Votre nom</label><input id="q-nom" name="nom" autocomplete="name"></div>
+<div class="field"><label for="q-nom">Votre nom *</label><input id="q-nom" name="nom" required autocomplete="name"></div>
 <div class="field"><label for="q-tel">Téléphone / WhatsApp *</label><input id="q-tel" type="tel" name="tel" required autocomplete="tel" placeholder="+261 34 …"></div>
 </div>
-<div class="field"><label for="q-mail">E-mail</label><input id="q-mail" type="email" name="email" autocomplete="email" placeholder="vous@exemple.com"></div>
+<div class="field"><label for="q-mail">E-mail (facultatif)</label><input id="q-mail" type="email" name="email" autocomplete="email" placeholder="vous@exemple.com"></div>
 <button class="btn btn-wa" type="submit">{icon("chat")} Recevoir mon devis sur WhatsApp</button>
 <p class="note">Vous restez libre : aucun paiement en ligne.</p>
 </form>
@@ -159,7 +159,7 @@ BUSINESS = {
     "slogan": "Madagascar, en toute confiance",
     "telephone": PHONE.replace(" ", ""),
     "email": EMAIL,
-    "priceRange": "80 000 Ar / demi-journée - 3 200 000 Ar / mois",
+    "priceRange": "120 000 Ar / jour - 3 200 000 Ar / mois",
     "currenciesAccepted": "MGA, EUR",
     "address": {"@type": "PostalAddress", "addressLocality": "Antananarivo", "addressCountry": "MG"},
     "areaServed": {"@type": "Country", "name": "Madagascar"},

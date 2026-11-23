@@ -29,6 +29,7 @@
       if (get('depart')) lines.push('• Départ : ' + get('depart'));
       if (get('destination')) lines.push('• Destination : ' + get('destination'));
       if (get('date')) lines.push('• Date : ' + frDate(get('date')));
+      if (get('periode')) lines.push('• Dates / période : ' + get('periode'));
       if (get('jours')) lines.push('• Nombre de jours : ' + get('jours'));
       if (get('mois')) lines.push('• Durée : ' + get('mois') + ' mois');
       if (get('passagers')) lines.push('• Passagers : ' + get('passagers'));
@@ -49,4 +50,10 @@
   // Date minimum = aujourd'hui
   var today = new Date().toISOString().slice(0, 10);
   document.querySelectorAll('input[type=date]').forEach(function (i) { i.min = today; });
+
+  // Prestation présélectionnée par l'URL (?prestation=Autre%20demande)
+  var pre = new URLSearchParams(location.search).get('prestation');
+  if (pre) document.querySelectorAll('select[name=service]').forEach(function (s) {
+    for (var i = 0; i < s.options.length; i++) if (s.options[i].text === pre) s.selectedIndex = i;
+  });
 })();
